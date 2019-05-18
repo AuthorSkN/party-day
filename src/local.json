@@ -1,4 +1,14 @@
 {
     "NAV_CATEGORIES_NAME": "Категории",
-    "NAV_ABOUT_NAME": "О программе"
+    "NAV_ABOUT_NAME": "О программе",
+    "NAME": "Название",
+    "DESC": "Описание",
+    "DATE": "Дата",
+    "TIME": "Время",
+    "IS_PUBLIC_PARTY": "Вход свободный",
+    "IS_PRIVATE_PARTY": "Контроль",
+    "COST": "Цена",
+    "ADDRESS": "Адрес",
+    "CATEGORY": "Категория",
+    "SAVE": "Сохранить"
 }
