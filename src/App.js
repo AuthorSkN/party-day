@@ -1,24 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Content from './components/Content';
+import {Link} from 'react-router-dom';
+import Local from './local.json'
+
+function Menu() {
+  return (
+    <nav>
+      <ul>
+        <li><Link to="/categories">{Local.NAV_CATEGORIES_NAME}</Link></li>
+        <li><Link to="/about">{Local.NAV_ABOUT_NAME}</Link></li>
+      </ul>
+    </nav>
+  );
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1><Link to="/">Party Day</Link></h1>
+        <Menu/>
+        <Content/>
       </header>
+
     </div>
   );
 }
