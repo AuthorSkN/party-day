@@ -1,0 +1,153 @@
+
+body {
+    margin: 0;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffffe5 
+}
+
+header {
+    background-color: #5a5e5f;
+    margin: 0;
+    padding: 20px;
+}
+
+nav {
+    display: inline;
+}
+
+h1 {
+    display: inline-block;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.logo {
+    color: #c281c2;
+}
+
+.menu-symbol {
+    position: relative; 
+    display: inline-block; 
+    width: 2em; 
+    height: 0.8em; 
+    margin-right: 0.3em; 
+    border-top: 0.2em solid #ffffffe5; 
+    border-bottom: 0.2em solid #ffffffe5; 
+    text-shadow: 0 1px 0 #151414; 
+}
+
+.menu-symbol:before { 
+    content: ""; 
+    position: absolute; 
+    top: 0.3em; 
+    left: 0px; 
+    width: 100%; 
+    border-top: 0.2em solid #ffffffe5; 
+  }
+
+.menu {
+    display: none;
+    position: absolute;
+    background-color:  #5a5e5f;
+    color: #ffffffe5;
+}
+
+.menu-symbol:focus ~ .menu, 
+.menu-symbol:active ~ .menu, 
+.menu:hover 
+{ 
+   display: block; 
+   float: none;
+} 
+
+
+.menu-item {
+    color: #ffffffe5;
+    padding: 1em;
+}
+
+.menu-item:hover{
+    color: #c281c2;
+    background-color: #404e50;
+}
+
+.content {
+    margin: 0 4% 0 4%;
+}
+
+.title-row {
+    vertical-align: middle;
+}
+
+.title {
+    text-align: center;
+    color: #770777;
+    display: inline-block;
+    margin: 1em;
+}
+
+.add-button {
+    display: inline-block;
+    margin-left: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 20pt;
+    background-color:#770777;
+    color: #ffffffe5;
+    width: 40px;
+    height: 40px;
+}
+
+.add-button:before {
+    content: "\271A";
+}
+
+.party-block {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    padding: 10px;
+    background-color: #770777;
+    color: white;
+    
+}
+
+.party-block-desc {
+    background-color: #704670;
+    height: 100px;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.party-block-inline {
+    display: inline-block;
+}
+
+.party-block-free {
+    border-radius: 5px;
+    padding-left: 5px; 
+}
+
+.party-block-category {
+    background-color: #704670; 
+}
+
+.partiesContainer {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, 350px);
+}
+
