@@ -10,6 +10,8 @@
     "COST": "Цена",
     "ADDRESS": "Адрес",
     "CATEGORY": "Категория",
+    "CATEGORIES": "Категории",
     "SAVE": "Сохранить",
-    "EVENT_PANEL": "Панель событий"
+    "EVENT_PANEL": "Панель событий",
+    "ABOUT": "Разработано в рамках лабораторной работы №2 по предмету \"Designing graphics user interfaces\""
 }

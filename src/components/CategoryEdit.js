@@ -14,12 +14,12 @@ class CategoryEdit extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="content">
                 <div>
-                    <h3>{Local.NAME}</h3>
+                    <h3 className="inline-title">{Local.NAME}</h3>
                     <input ref={input => this.nameInput = input} />
                 </div>
-                <button onClick={() => this.onSaveCategory()}><Link to="/categories">{Local.SAVE}</Link></button>
+                <Link to="/categories"><div className="save-button" onClick={() => this.onSaveCategory()}>{Local.SAVE}</div></Link>
             </div>
         );
     }

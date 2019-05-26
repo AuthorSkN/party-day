@@ -26,10 +26,15 @@ a {
     color: inherit;
 }
 
-ul, ol {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+input {
+    line-height: 20pt;
+    font-size: 16pt;
+}
+
+textarea {
+    width: 300px;
+    height: 50px;
 }
 
 
@@ -58,6 +63,9 @@ ul, ol {
   }
 
 .menu {
+    margin: 0;
+    padding: 0;
+    
     display: none;
     position: absolute;
     background-color:  #5a5e5f;
@@ -76,6 +84,7 @@ ul, ol {
 .menu-item {
     color: #ffffffe5;
     padding: 1em;
+    list-style-type: none;
 }
 
 .menu-item:hover{
@@ -150,4 +159,26 @@ ul, ol {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(2, 350px);
 }
+
+.inline-title {
+    color: #770777;
+    display: inline-block;
+    margin: 1em;
+}
+
+.save-button {
+    background-color: #770777;
+    display: inline-block;
+    font-size: 20pt;
+    color: white;
+    padding: 5px;
+}
+
+.category-row {
+    border-bottom:1px solid #5a5e5f;
+    font-size: 20pt;
+    padding: 5px;
+}
+
+
 
