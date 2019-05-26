@@ -1,6 +1,7 @@
 import React from 'react';
 import PartyBlock from './PartyBlock';
 import { Link } from 'react-router-dom';
+import { CSSTransitionGroup } from 'react-transition-group';
 import Local from '../local.json';
 
 const PartiesMap = new Map();
@@ -51,21 +52,29 @@ const PartiesBoard = () => {
     const partyBlocks = [];
     PartiesMap.forEach((party, key) => {
         partyBlocks.push((
-            <div key={key} style={{textAlign: "center"}}><PartyBlock party={party} /></div>
+            <div key={key} style={{ textAlign: "center" }}><PartyBlock party={party} /></div>
         ));
     });
-    
+
     return (
-        <div className="content">
-            <div className="title-row">
-                <Link to="/party-edit"><div className="add-button"></div></Link>
-                <h2 className="title">{Local.EVENT_PANEL}</h2>
+        <CSSTransitionGroup
+            transitionName="partiesBoardTransition"
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnter={false}
+            transitionLeave={false}
+        >
+            <div className="content">
+                <div className="title-row">
+                    <Link to="/party-edit"><div className="add-button"></div></Link>
+                    <h2 className="title">{Local.EVENT_PANEL}</h2>
+                </div>
+                <div className="partiesContainer">
+                    {partyBlocks}
+                </div>
+
             </div>
-            <div className="partiesContainer">
-                {partyBlocks}
-            </div>
-            
-        </div>
+        </CSSTransitionGroup>
     );
 }
 

@@ -180,5 +180,53 @@ textarea {
     padding: 5px;
 }
 
+/*---Animation-----------------------------------------------------------------------*/
+
+.partiesBoardTransition-appear{
+    opacity:0;
+}
+
+.partiesBoardTransition-appear.partiesBoardTransition-appear-active{
+    opacity: 1;
+    transition:all .5s ease-in-out;
+}
+
+
+.partiesEditTransition-appear{
+    opacity:0;
+}
+
+ .partiesEditTransition-appear.partiesEditTransition-appear-active{
+    opacity: 1;
+    transition:all .5s ease-in-out;
+}
+
+.categoriesListTransition-appear{
+    opacity:0;
+}
+
+ .categoriesListTransition-appear.categoriesListTransition-appear-active{
+    opacity: 1;
+    transition:all .5s ease-in-out;
+}
+
+.categoriesEditTransition-appear{
+    opacity:0;
+}
+
+ .categoriesEditTransition-appear.categoriesEditTransition-appear-active{
+    opacity: 1;
+    transition:all .5s ease-in-out;
+}
+
+.aboutTransition-appear{
+    opacity:0;
+}
+
+ .aboutTransition-appear.aboutTransition-appear-active{
+    opacity: 1;
+    transition:all .5s ease-in-out;
+}
+
 
 

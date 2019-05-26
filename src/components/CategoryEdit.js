@@ -3,6 +3,7 @@ import Local from '../local.json'
 import { CategoriesMap } from './CategoriesList';
 import { Link } from 'react-router-dom';
 import { generateRandomID } from '../Tools';
+import { CSSTransitionGroup } from 'react-transition-group';
 
 class CategoryEdit extends React.Component {
 
@@ -14,13 +15,21 @@ class CategoryEdit extends React.Component {
 
     render() {
         return (
-            <div className="content">
-                <div>
-                    <h3 className="inline-title">{Local.NAME}</h3>
-                    <input ref={input => this.nameInput = input} />
+            <CSSTransitionGroup
+                transitionName="categoriesEditTransition"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnter={false}
+                transitionLeave={false}
+            >
+                <div className="content">
+                    <div>
+                        <h3 className="inline-title">{Local.NAME}</h3>
+                        <input ref={input => this.nameInput = input} />
+                    </div>
+                    <Link to="/categories"><div className="save-button" onClick={() => this.onSaveCategory()}>{Local.SAVE}</div></Link>
                 </div>
-                <Link to="/categories"><div className="save-button" onClick={() => this.onSaveCategory()}>{Local.SAVE}</div></Link>
-            </div>
+            </CSSTransitionGroup>
         );
     }
 }
