@@ -2,7 +2,6 @@
 export function register(config) {
     window.addEventListener('load', () => {
       if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
           navigator.serviceWorker.register('service-worker.js').then(function (registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful with scope: ', registration.scope);
@@ -12,7 +11,6 @@ export function register(config) {
           }).catch(function (err) {
             console.log(err)
           });
-        });
       } else {
         console.log('service worker is not supported');
       }
@@ -20,7 +18,7 @@ export function register(config) {
   }
 
 // Set this to true for production
-var doCache = false;
+var doCache = true;
 
 // Name our cache
 var CACHE_NAME = 'my-pwa-cache-v1';
