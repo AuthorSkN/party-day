@@ -13,5 +13,8 @@
     "CATEGORIES": "Категории",
     "SAVE": "Сохранить",
     "EVENT_PANEL": "Панель событий",
-    "ABOUT": "Разработано в рамках лабораторной работы №2 по предмету \"Designing graphics user interfaces\""
+    "ABOUT": "Разработано в рамках лабораторной работы №2 по предмету \"Designing graphics user interfaces\"",
+    "DELETE": "Удалить",
+    "EDIT": "Изменить",
+    "DELETE_PARTY_QUATION": "Удалить событие?"
 }

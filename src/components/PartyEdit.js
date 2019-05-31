@@ -46,7 +46,7 @@ class PartyEdit extends React.Component {
                     </div>
                     <div>
                         <h3 className="inline-title">{Local.DESC}</h3>
-                        <textarea ref={input => this.descInput = input}></textarea>
+                        <textarea maxLength="100" ref={input => this.descInput = input}></textarea>
                     </div>
                     <div>
                         <h3 className="inline-title">{Local.DATE}</h3>

@@ -3,11 +3,13 @@ import Local from '../local.json'
 
 class PartyBlock extends React.Component {
 
-    render() {
+    render(props) {
         const party = this.props.party;
+        const id = this.props.id;
         const partyFreeStatus = party.isFree ? Local.IS_PUBLIC_PARTY : Local.IS_PRIVATE_PARTY;
         return (
             <div className="party-block">
+                <span onClick={() => this.props.deleteCallback(id)}>{Local.DELETE}</span>
                 <h3>{party.name}</h3>
                 <p className="party-block-desc">{party.desc}</p>
                 <div>

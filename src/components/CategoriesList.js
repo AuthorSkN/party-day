@@ -4,11 +4,11 @@ import Local from '../local.json';
 import { CSSTransitionGroup } from 'react-transition-group';
 
 const CategoriesMap = new Map();
+CategoriesMap.set(1, "Вечеринка");
+CategoriesMap.set(2, "Квартирник");
+CategoriesMap.set(3, "Пикник");
 
 const CategoriesList = () => {
-    CategoriesMap.set(1, "Вечеринка");
-    CategoriesMap.set(2, "Квартирник");
-    CategoriesMap.set(3, "Пикник");
     const categoryBlocks = [];
     CategoriesMap.forEach((categoryName, key) => {
         categoryBlocks.push((
