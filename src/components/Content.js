@@ -11,7 +11,7 @@ const Content = () => {
         <Switch>
             <Route exact path="/" component={PartiesBoard}/>
             <Route path="/Parties" component={PartiesBoard}/>
-            <Route path="/Party-edit" component={PartyEdit}/>
+            <Route path="/Party-edit/:id?" component={PartyEdit}/>
             <Route path="/Category-edit" component={CategoryEdit}/>
             <Route path="/Categories" component={CategoriesList}/>
             <Route path="/About" component={About}/>

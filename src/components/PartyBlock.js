@@ -1,5 +1,6 @@
 import React from 'react';
 import Local from '../local.json'
+import { Link } from 'react-router-dom';
 
 class PartyBlock extends React.Component {
 
@@ -10,6 +11,7 @@ class PartyBlock extends React.Component {
         return (
             <div className="party-block">
                 <span onClick={() => this.props.deleteCallback(id)}>{Local.DELETE}</span>
+                <Link to={"/party-edit/" + id}><span>{Local.EDIT}</span></Link>
                 <h3>{party.name}</h3>
                 <p className="party-block-desc">{party.desc}</p>
                 <div>

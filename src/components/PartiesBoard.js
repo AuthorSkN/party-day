@@ -3,7 +3,6 @@ import PartyBlock from './PartyBlock';
 import { Link } from 'react-router-dom';
 import { CSSTransitionGroup } from 'react-transition-group';
 import Local from '../local.json';
-import { tsConstructorType } from '@babel/types';
 
 
 const sampleParty = {
