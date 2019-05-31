@@ -13,7 +13,7 @@ const sampleParty = {
     isFree: false,
     cost: 3000,
     address: "г. Самара, ул Завдская, дом 13",
-    category: "Super party"
+    category: "Вечеринка"
 }
 
 const PartiesMap = new Map();

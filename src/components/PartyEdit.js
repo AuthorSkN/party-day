@@ -37,7 +37,7 @@ class PartyEdit extends React.Component {
             desc: this.descInput.value,
             date: this.dateInput.value,
             time: this.timeInput.value,
-            isFree: this.isFreeInput.value,
+            isFree: this.isFreeInput.checked,
             cost: this.costInput.value,
             address: this.addressInput.value,
             category: this.categoryInput.value
@@ -50,7 +50,7 @@ class PartyEdit extends React.Component {
         const categoryOpions = [];
         CategoriesMap.forEach((categoryName, key) => {
             categoryOpions.push((
-                <option key={key} value={categoryName}>{categoryName}</option>
+                <option key={key} value={categoryName} >{categoryName}</option>
             ));
         });
         return (
@@ -105,6 +105,7 @@ class PartyEdit extends React.Component {
                     <div>
                         <h3 className="inline-title">{Local.IS_PUBLIC_PARTY}</h3>
                         <input type="checkbox" 
+                        defaultChecked={this.state.isFree}
                         ref={input => this.isFreeInput = input}
                          onChange={(e) => {
                             let newState = Object.assign({}, this.state);
@@ -135,7 +136,8 @@ class PartyEdit extends React.Component {
                     </div>
                     <div>
                         <h3 className="inline-title">{Local.CATEGORY}</h3>
-                        <select ref={input => this.categoryInput = input}>
+                        <select ref={input => this.categoryInput = input}
+                        defaultValue={this.state.category}>
                             {categoryOpions}
                         </select>
                     </div>
