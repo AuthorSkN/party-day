@@ -10,8 +10,8 @@ class PartyBlock extends React.Component {
         const partyFreeStatus = party.isFree ? Local.IS_PUBLIC_PARTY : Local.IS_PRIVATE_PARTY;
         return (
             <div className="party-block">
-                <span onClick={() => this.props.deleteCallback(id)}>{Local.DELETE}</span>
-                <Link to={"/party-edit/" + id}><span>{Local.EDIT}</span></Link>
+                <span className="partyEditButton" onClick={() => this.props.deleteCallback(id)}>{Local.DELETE}</span>
+                <Link to={"/party-edit/" + id}><span className="partyEditButton">{Local.EDIT}</span></Link>
                 <h3>{party.name}</h3>
                 <p className="party-block-desc">{party.desc}</p>
                 <div>

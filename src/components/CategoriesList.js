@@ -8,31 +8,51 @@ CategoriesMap.set(1, "Вечеринка");
 CategoriesMap.set(2, "Квартирник");
 CategoriesMap.set(3, "Пикник");
 
-const CategoriesList = () => {
-    const categoryBlocks = [];
-    CategoriesMap.forEach((categoryName, key) => {
-        categoryBlocks.push((
-            <li className="category-row" key={key}>{categoryName}</li>
-        ));
-    });
+class CategoriesList extends React.Component {
 
-    return (
-        <CSSTransitionGroup
-            transitionName="categoriesListTransition"
-            transitionAppear={true}
-            transitionAppearTimeout={500}
-            transitionEnter={false}
-            transitionLeave={false}
-        >
-            <div className="content">
-                <div className="title-row">
-                    <Link to="/category-edit"><div className="add-button"></div></Link>
-                    <h2 className="title">{Local.CATEGORIES}</h2>
+    constructor(props) {
+        super(props);
+        this.state = {
+            categories: CategoriesMap
+        };
+    }
+
+
+    deleteCategory(id) {
+        if (window.confirm(Local.DELETE_CATEGORY_QUATION)) {
+            CategoriesMap.delete(id);
+        }
+        this.setState({
+            categories: CategoriesMap
+        });
+    }
+
+    render() {
+        const categoryBlocks = [];
+        this.state.categories.forEach((categoryName, key) => {
+            categoryBlocks.push((
+                <li className="category-row" key={key}>{categoryName} <span className="categoryEditButton" onClick={() => this.deleteCategory(key)}>{Local.DELETE}</span></li>
+            ));
+        });
+
+        return (
+            <CSSTransitionGroup
+                transitionName="categoriesListTransition"
+                transitionAppear={true}
+                transitionAppearTimeout={500}
+                transitionEnter={false}
+                transitionLeave={false}
+            >
+                <div className="content">
+                    <div className="title-row">
+                        <Link to="/category-edit"><div className="add-button"></div></Link>
+                        <h2 className="title">{Local.CATEGORIES}</h2>
+                    </div>
+                    <ol>{categoryBlocks}</ol>
                 </div>
-                <ol>{categoryBlocks}</ol>
-            </div>
-        </CSSTransitionGroup>
-    );
+            </CSSTransitionGroup>
+        );
+    }
 }
 
 export default CategoriesList;

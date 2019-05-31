@@ -129,6 +129,7 @@ textarea {
     display: inline-block;
     width: 250px;
     padding: 10px;
+    padding-top:2px;
     background-color: #770777;
     color: white;
     
@@ -179,6 +180,24 @@ textarea {
     border-bottom:1px solid #5a5e5f;
     font-size: 20pt;
     padding: 5px;
+}
+
+.partyEditButton {
+    color: #c281c2;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 10pt;
+}
+
+.partyEditButton:hover {
+    color: white;
+}
+.categoryEditButton {
+    color: #c281c2;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 10pt;
+    cursor: pointer;
 }
 
 /*---Animation-----------------------------------------------------------------------*/
